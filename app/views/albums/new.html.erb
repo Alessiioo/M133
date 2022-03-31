@@ -1,0 +1,8 @@
+  <h1>Alben erfassen</h1>
+  <%= form_with model: @album,url:albums_path do |f| %>
+  <p>Band: </p><%= f.text_field :band %>
+  <p>Titel: </p><%= f.text_field :title %>
+  <p>Jahr: </p><%= f.text_field :year %>
+  <%=f.submit "Album speichern"%>
+  <%end %>
+<button><a href="/albums">Abbrechen</a></button>

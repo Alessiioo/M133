@@ -1,0 +1,24 @@
+<h1> <%@album.band %></h1>
+<table>
+  <thead>
+    <th>Nr.</th>
+    <th>Title</th>
+    <th>Dauer</th>
+
+  </thead>
+  <tbody>
+    <% @album.songs.each do |a| %>
+    <tr>
+      <td><%= a.position%></td>
+      <td><%= a.title%></td>
+      <td><%= a.duration%></td>
+
+    </tr>
+    <%end%>
+    <tr>
+      <td>Gesamtdauer: </td>
+      <td><%=@album.duration%>
+    </tr>
+  </tbody>
+
+</table>
